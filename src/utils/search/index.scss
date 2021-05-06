@@ -41,17 +41,17 @@
     max-width: 15px;
     cursor: pointer;
     padding: 0;
-    margin-top: 10px;
+    margin: auto 10px;
     border: none;
     max-height: 15px;
     white-space: nowrap;
-    color: #fff;
+    color: black;
 
     i{
         color: #000;
-    }
 
-    &:hover{
-        text-decoration: underline;
+        &:hover{
+            transform: scale(1.2);
+        }
     }
 }

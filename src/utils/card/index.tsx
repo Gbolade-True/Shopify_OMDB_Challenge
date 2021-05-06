@@ -16,9 +16,9 @@ const GCard:FC<ICardProps> = ( props ) => {
     const [ isNominated, setIsNominated ] = useState(false);
 
     return(
-        <div className="card-container" >
+        <div className={isNominated || value.showNominees ? "card-container nominated" : "card-container"} >
 
-            <div className={isNominated ? "card-header nominated" : "card-header"}>
+            <div className='card-header'>
                 <p className="card-label">{cardHeader}</p>
                 {(isNominated || value.showNominees) && <i className="fa fa-star"/>}
             </div>
@@ -48,8 +48,9 @@ const GCard:FC<ICardProps> = ( props ) => {
                         Remove nominee
                     </button>
                     :
-                    <button className='n-button' onClick={(e) =>{ onClick!(e); setIsNominated(true) }}>
-                    Add to Nominees
+                    <button className='n-button' 
+                    onClick={(e) =>{isNominated ?  remNom!(e) : onClick!(e); setIsNominated(!isNominated) }}>
+                    {isNominated ? 'Remove nominee' : 'Add to Nominees'}
                     </button>
                 }
 

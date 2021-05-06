@@ -19,6 +19,13 @@ const Search: FC<IProps> = (props) => {
     return (
         <div style={{ transition : "all .3s ease" }}>
             <div style={{display:"flex"}} >
+                {
+                    valueIn ?
+                    <button className={`close-section btn`}  onClick={ onClose }>
+                        <i className="far fa-window-close"></i>
+                    </button>
+                    : ''
+                }
                 <div className='search'>
                     <input
                         defaultValue={defaultValue}
@@ -33,13 +40,6 @@ const Search: FC<IProps> = (props) => {
                     Search
                 </button>}
             </div>
-            {
-                valueIn ?
-                <button className={`close-section btn`}  onClick={ onClose }>
-                    <i className="far fa-window-close"></i>&nbsp;Clear Search
-                </button>
-                : ''
-            }
         </div>
     )
 }
