@@ -1,0 +1,26 @@
+.home {
+    display: flex;
+    height: auto;
+    min-height: 100vh;
+    width: 100%;
+
+    .card-wrapper{
+        padding-top: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        flex: 1;
+        height: auto;
+      }
+}
+.notify {
+  border: 1px solid teal;
+  border-radius: 5px;
+  cursor: pointer;
+
+  &:hover {
+      background-color: lighten($color: teal, $amount: 10);
+      color: #fff
+  }
+}
