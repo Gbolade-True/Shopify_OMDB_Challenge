@@ -23,7 +23,7 @@ const Navbar: FC<IProps> = (props) => {
                 </div>
 
                 <div className='search'>
-                    <Search valueIn={movieName.length > 0} value={movieName} onChange={handleChange}                    onClick={() => {getMoviesBySearch(movieName); console.log(value)}} onClose={() => setMovieName('')} />
+                    <Search valueIn={movieName.length > 0} value={movieName} onChange={handleChange}                    onClick={() => {getMoviesBySearch(movieName, value.pageNumber); value.setMovie(movieName)}} onClose={() => setMovieName('')} />
                 </div>
                 
                 <div className='icons'>
