@@ -2,4 +2,4 @@ export const pageurl = {
     HOME: '/'
 };
 
-export const baseurl = 'http://www.omdbapi.com/?apikey=191e083';
+export const baseurl = 'https://www.omdbapi.com/?apikey=191e083';
