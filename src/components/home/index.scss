@@ -27,4 +27,10 @@
 
 i{
   cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+
+  &:hover{
+    background-color: teal;
+  }
 }

@@ -46,9 +46,13 @@ const Home:FC<IProps> = ( props ) => {
                     'View Nominees'
                     : 
                     <div style={{display: 'flex', justifyContent:'center', alignItems:'center'}}>
-                        <i className='fa fa-arrow-left' onClick={() => {pageNumber > 1 ? setPageNumber(pageNumber - 1): void(0); getMoviesBySearch(movie, pageNumber-1)}} />
-                            <p style={{margin: '0 10px'}}>Page {pageNumber}</p>
-                        <i className='fa fa-arrow-right' onClick={() => { setPageNumber(pageNumber + 1); getMoviesBySearch(movie, pageNumber+1)}} />
+                        {nominees.length<5 && 
+                        <>
+                            <i className='fa fa-arrow-left' onClick={() => {pageNumber > 1 ? setPageNumber(pageNumber - 1): void(0); getMoviesBySearch(movie, pageNumber-1)}} />
+                                <p style={{margin: '0 10px'}}>Page {pageNumber}</p>
+                            <i className='fa fa-arrow-right' onClick={() => { setPageNumber(pageNumber + 1); getMoviesBySearch(movie, pageNumber+1)}} />
+                        </>
+                        }
                     </div>
                     
                 }
@@ -76,8 +80,8 @@ const Home:FC<IProps> = ( props ) => {
                 :
                 <>
                     <h2>You've successfully nominated 5 movies!!!</h2>  
-                    <div className='notify'>
-                        <p onClick={() => setShowNominees(true)}>
+                    <div className='notify' onClick={() => setShowNominees(true)}>
+                        <p>
                             View the nominee list...
                        </p>
                     </div>
