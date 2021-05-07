@@ -30,7 +30,7 @@ const Navbar: FC<IProps> = (props) => {
                     {value.showNominees?
                         <p onClick={ () => {value.setShowNominees(false)}}>Back to list</p>
                         :
-                        <p onClick={ () => {value.setShowNominees(true)}}>Nominees {value.nominees.length}</p>
+                        <p onClick={ () => {value.setShowNominees(true)}}>Nominees: {value.nominees.length}</p>
                     }
                 </div>
             </header>

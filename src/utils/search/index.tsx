@@ -21,7 +21,7 @@ const Search: FC<IProps> = (props) => {
             <div style={{display:"flex"}} >
                 {
                     valueIn ?
-                    <button className={`close-section btn`}  onClick={ onClose }>
+                    <button className={`close-section`}  onClick={ onClose }>
                         <i className="far fa-window-close"></i>
                     </button>
                     : ''
