@@ -46,12 +46,14 @@ const Home:FC<IProps> = ( props ) => {
                     'View Nominees'
                     : 
                     <div style={{display: 'flex', justifyContent:'center', alignItems:'center'}}>
-                        {nominees.length<5 && 
+                        {nominees.length<5 && movies.length > 0 ?
                         <>
                             <i className='fa fa-arrow-left' onClick={() => {pageNumber > 1 ? setPageNumber(pageNumber - 1): void(0); getMoviesBySearch(movie, pageNumber-1)}} />
                                 <p style={{margin: '0 10px'}}>Page {pageNumber}</p>
                             <i className='fa fa-arrow-right' onClick={() => { setPageNumber(pageNumber + 1); getMoviesBySearch(movie, pageNumber+1)}} />
                         </>
+                        :
+                        <p>Search for movies...</p>
                         }
                     </div>
                     
