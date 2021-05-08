@@ -41,7 +41,7 @@ const Home:FC<IProps> = ( props ) => {
     return(
         <div style={{textAlign: 'center', backgroundColor:'#1D1D1D', minHeight:'100vh'}}>
 
-            <div style={{paddingTop: '80px'}}>
+            <div className='top-info'>
                 {showNominees ?
                     'View Nominees'
                     : 

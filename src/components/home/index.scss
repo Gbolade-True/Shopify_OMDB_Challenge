@@ -1,3 +1,13 @@
+@import './../../styles/variables.scss';
+
+.top-info{
+  padding-top: 180px;
+
+  @media (min-width: $md-breakpoint) {
+    padding-top: 120px;
+  }
+}
+
 .home {
     display: flex;
     height: auto;
@@ -5,7 +15,7 @@
     width: 100%;
 
     .card-wrapper{
-        padding-top: 20px;
+        padding-top: 40px;
         display: flex;
         justify-content: center;
         align-items: center;
